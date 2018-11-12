@@ -7,4 +7,9 @@ public class Mathematic {
         return percentage;
     }
 
+    public static double valueOfPercentage(double value, double percentageFrom, double percentageTo) {
+        double valueOfPercentage = (percentageTo * value) / percentageFrom;
+        return valueOfPercentage;
+    }
+
 }

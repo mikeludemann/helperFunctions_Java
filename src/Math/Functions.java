@@ -112,7 +112,7 @@ public class Functions {
         for (int i = 0; i < length; i++) {
 
             char character = str.charAt(i);
-            char next_char = str.charAt(i + 1);
+            char nextCharacter = str.charAt(i + 1);
 
             if (character == 'M') {
 
@@ -120,12 +120,12 @@ public class Functions {
 
             } else if (character == 'C') {
 
-                if (next_char == 'M') {
+                if (nextCharacter == 'M') {
 
                     result += 900;
                     i++;
 
-                } else if (next_char == 'D') {
+                } else if (nextCharacter == 'D') {
 
                     result += 400;
                     i++;
@@ -141,12 +141,12 @@ public class Functions {
 
             } else if (character == 'X') {
 
-                if (next_char == 'C') {
+                if (nextCharacter == 'C') {
 
                     result += 90;
                     i++;
 
-                } else if (next_char == 'L') {
+                } else if (nextCharacter == 'L') {
 
                     result += 40;
                     i++;
@@ -162,12 +162,12 @@ public class Functions {
 
             } else if (character == 'I') {
 
-                if (next_char == 'X') {
+                if (nextCharacter == 'X') {
 
                     result += 9;
                     i++;
 
-                } else if (next_char == 'V') {
+                } else if (nextCharacter == 'V') {
 
                     result += 4;
                     i++;
@@ -277,5 +277,44 @@ public class Functions {
         }
 
     }
+
+    public static int pentagonalNumber(int i) {
+        return (i * (3 * i - 1)) / 2;
+    }
+
+    public static void Matrix(int number) {
+        for (int i = 0; i < number; i++) {
+            for (int j = 0; j < number; j++) {
+                System.out.print((int) (Math.random() * 2) + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    /* ############################################################ */
+
+    public static boolean isSideValid(double firstSide, double secondSide, double thirdSide) {
+        if (firstSide + secondSide > thirdSide && secondSide + thirdSide > firstSide
+                && firstSide + thirdSide > secondSide) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static double area_triangle(double firstSide, double secondSide, double thirdSide) {
+        double area = 0;
+        double s = (firstSide + secondSide + thirdSide) / 2;
+
+        if (isSideValid(firstSide, secondSide, thirdSide)) {
+            area = Math.sqrt(s * (s - firstSide) * (s - secondSide) * (s - thirdSide));
+            return area;
+        } else {
+            area = 0;
+            return area;
+        }
+    }
+
+    /* ############################################################ */
 
 }

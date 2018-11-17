@@ -6,16 +6,6 @@ import java.math.*;
 
 public class Converter {
 
-    public static double fahrenheitToCelsius(double number) {
-        double celsius = ((5 * (number - 32.0)) / 9.0);
-        return celsius;
-    }
-
-    public static double celsiusToFahrenheit(double number) {
-        double fahrenheit = (number * 1.8) + 32;
-        return fahrenheit;
-    }
-
     public static double degreeToRadian(double number) {
         double radian = number * (Math.PI * 180);
         return radian;
